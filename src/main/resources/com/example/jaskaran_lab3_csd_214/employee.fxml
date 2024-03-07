@@ -2,20 +2,34 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="237.0" prefWidth="359.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jaskaran_lab3_csd_214.HelloController">
+<VBox alignment="CENTER" prefHeight="493.0" prefWidth="520.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jaskaran_lab3_csd_214.employee">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText">
-      <graphic>
-         <TextField text="enter your username" />
-      </graphic></Label>
-   <PasswordField text="enter password" />
-    <Button onAction="#onHelloButtonClick" fx:id="hbt" text="login" />
+   <children>
+      <TextField />
+      <TextField />
+      <TextField />
+      <Pane prefHeight="192.0" prefWidth="450.0">
+         <children>
+            <Button layoutX="43.0" layoutY="2.0" mnemonicParsing="false" text="DELETE" />
+            <Button layoutX="401.0" layoutY="2.0" mnemonicParsing="false" text="LOAD" />
+            <TableView layoutX="17.0" layoutY="60.0" prefHeight="200.0" prefWidth="447.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="75.0" text="NAME" />
+                  <TableColumn prefWidth="75.0" text="SALARY" />
+              </columns>
+            </TableView>
+            <Button layoutX="148.0" layoutY="2.0" mnemonicParsing="false" text="INSERT" />
+            <Button layoutX="274.0" layoutY="2.0" mnemonicParsing="false" text="UPDATE" />
+         </children>
+      </Pane>
+   </children>
 </VBox>
